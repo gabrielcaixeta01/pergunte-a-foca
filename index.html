@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foca de Gabriel</title>
+</head>
+<body>
+    <h1>Faça uma pergunta para a Foca</h1>
+    <img height="380px" src="foquinha.jpg" alt="Foca da CJR">
+    <div>
+        <input type="text" class="input1"> ou <input type="text" class="input2">
+    </div>
+    <button type="button" onclick="perguntar()"> Perguntar </button>
+    
+</body>
+</html>
+
+<style>
+    button {
+        background-color: #003882;
+        color: white;
+        border-radius: 15px;
+        padding: 5px;
+    }
+
+    body {
+        background-color: #00ab61;
+        text-align: center;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+    }
+
+    input {
+        
+        border-radius: 15px;
+        border: 1px solid #000;
+        margin-bottom: 10px;
+    }
+    img {
+        margin-bottom: 10px;
+        border: 5px solid black;
+        border-radius: 180px;
+    }
+
+    h1 {
+        color: white;
+        
+    }
+</style>
+
+<script>
+    function perguntar() {
+        var escolha = Math.floor(Math.random() * 10);
+        if (escolha%2)
+	        alert("A Foca escolheu "+document.querySelector(".input1").value)
+        else
+	        alert("A Foca escolheu "+document.querySelector(".input2").value)
+    }
+</script>
